@@ -22,8 +22,7 @@ void main() {
   const NumberTrivia tNumberTrivia =
       NumberTrivia(number: tNumber, text: 'Any text');
 
-  test('Should call NumberTriviaRepository getConcreteNumberTrivia() method',
-      () async {
+  test('Should get NumberTrivia by number from repository', () async {
     // arrange
     when(() => mockNumberTriviaRepository.getConcreteNumberTrivia(
             number: any(named: 'number')))
