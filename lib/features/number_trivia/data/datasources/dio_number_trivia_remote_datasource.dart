@@ -13,8 +13,8 @@ class DioNumberTriviaRemoteDatasource implements INumberTriviaRemoteDatasource {
   @override
   Future<NumberTriviaModel> getConcreteNumberTrivia(int number) async {
     try {
-      final response = await dio
-          .get(REMOTE_NUMBER_TRIVIA_BASE_URL + number.toString() + '?json');
+      final response =
+          await dio.get('$REMOTE_NUMBER_TRIVIA_BASE_URL$number?json');
 
       return NumberTriviaModel.fromJson(response.data);
     } on DioError {
@@ -26,7 +26,7 @@ class DioNumberTriviaRemoteDatasource implements INumberTriviaRemoteDatasource {
   Future<NumberTriviaModel> getRandomNumberTrivia() async {
     try {
       final response =
-          await dio.get(REMOTE_NUMBER_TRIVIA_BASE_URL + 'random?json');
+          await dio.get('${REMOTE_NUMBER_TRIVIA_BASE_URL}random?json');
 
       return NumberTriviaModel.fromJson(response.data);
     } on DioError {

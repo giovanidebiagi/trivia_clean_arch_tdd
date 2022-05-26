@@ -29,7 +29,7 @@ void main() {
   final tNumber = numberTrivia.number;
 
   _setUpSuccessfulNumberTriviaGetRequest({required String endpoint}) {
-    when(() => mockDio.get(REMOTE_NUMBER_TRIVIA_BASE_URL + endpoint + '?json'))
+    when(() => mockDio.get('$REMOTE_NUMBER_TRIVIA_BASE_URL$endpoint?json'))
         .thenAnswer(
       (invocation) async {
         return Response(
@@ -52,8 +52,7 @@ void main() {
           .getConcreteNumberTrivia(tNumber);
 
       // assert
-      verify(() => mockDio
-          .get(REMOTE_NUMBER_TRIVIA_BASE_URL + tNumber.toString() + '?json'));
+      verify(() => mockDio.get('$REMOTE_NUMBER_TRIVIA_BASE_URL$tNumber?json'));
       expect(response, numberTrivia);
     });
 
@@ -80,7 +79,7 @@ void main() {
           await dioNumberTriviaRemoteDatasource.getRandomNumberTrivia();
 
       // assert
-      verify(() => mockDio.get(REMOTE_NUMBER_TRIVIA_BASE_URL + 'random?json'));
+      verify(() => mockDio.get('${REMOTE_NUMBER_TRIVIA_BASE_URL}random?json'));
       expect(response, numberTrivia);
     });
 
