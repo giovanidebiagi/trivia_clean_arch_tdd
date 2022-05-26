@@ -1,5 +1,6 @@
 import 'package:dartz/dartz.dart';
 import 'package:equatable/equatable.dart';
+
 import '../errors/failures/i_failure.dart';
 
 abstract class IUseCase<Type, Params> {

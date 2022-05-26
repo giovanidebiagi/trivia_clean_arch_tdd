@@ -7,7 +7,6 @@ import 'package:trivia_clean_arch_tdd/core/errors/failures/invalid_input_failure
 import 'package:trivia_clean_arch_tdd/core/errors/failures/server_failure.dart';
 import 'package:trivia_clean_arch_tdd/core/usecases/i_usecase.dart';
 import 'package:trivia_clean_arch_tdd/core/utils/type_converting_utils.dart';
-import 'package:trivia_clean_arch_tdd/features/number_trivia/data/repositories/number_trivia_repository.dart';
 import 'package:trivia_clean_arch_tdd/features/number_trivia/domain/entities/number_trivia.dart';
 import 'package:trivia_clean_arch_tdd/features/number_trivia/domain/usecases/get_concrete_number_trivia.dart';
 import 'package:trivia_clean_arch_tdd/features/number_trivia/domain/usecases/get_random_number_trivia.dart';

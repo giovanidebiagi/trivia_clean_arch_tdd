@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+
 import 'features/number_trivia/presentation/pages/number_trivia_page.dart';
 
 class AppWidget extends StatelessWidget {

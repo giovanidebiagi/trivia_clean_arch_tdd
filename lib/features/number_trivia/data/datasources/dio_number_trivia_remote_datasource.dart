@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+
 import '../../../../core/errors/exceptions/server_exception.dart';
 import '../models/number_trivia_model.dart';
 import 'i_number_trivia_remote_datasource.dart';
